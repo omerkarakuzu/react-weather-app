@@ -7,12 +7,13 @@ import './App.css';
 
 function App() {
 
+
   const [currentWeather, setCurrentWeather] = useState(null)
   const [forecast, setForecast] = useState(null)
 
   const handleOnSearchChange = (searchData) => 
   {
-    const [lat,lon] = searchData.value.split(" ");
+    const [lat=41.01384,lon=28.94966] = searchData.value.split(" ");
 
     const currentWeatherFetch = fetch(`${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_APIKEY}&units=metric`);
     const forecastFeth = fetch(`${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_APIKEY}&units=metric`);
