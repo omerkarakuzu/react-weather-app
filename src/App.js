@@ -15,7 +15,7 @@ function App() {
     
     var searchData = {value: '41.01384 28.94966', label: 'İstanbul, TR'}
     handleOnSearchChange(searchData);
-    console.log("SearchData:",searchData);
+    console.log("SearchData1:",searchData);
 
   }, [])
   
